@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Laptop Store</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        .container { width: 80%; margin: auto; }
+        .card { background: white; padding: 20px; margin: 15px; border-radius: 10px; }
+        button { background: green; color: white; padding: 10px; border: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Laptop Store</h1>
+
+    <div th:each="laptop : ${laptops}" class="card">
+        <h2 th:text="${laptop.name}"></h2>
+        <p>Price: $<span th:text="${laptop.price}"></span></p>
+        <button>Add to Cart</button>
+    </div>
+</div>
+</body>
+</html>
