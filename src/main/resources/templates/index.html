@@ -1,46 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns:th="https://www.magnific.com/free-photos-vectors/laptop-website">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8">
     <title>Laptop Store</title>
 
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #f4f4f4;
-      }
-      .container {
-        width: 80%;
-        margin: auto;
-      }
-      .card {
-        background: white;
-        padding: 20px;
-        margin: 15px;
-        border-radius: 10px;
-      }
-      button {
-        background: green;
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
-    <div class="container">
-      <h1>Laptop Store</h1>
+<body>
+<div class="container">
+    <h1>Laptop Store</h1>
 
-      <div th:each="laptop : ${laptops}" class="card">
+    <div th:each="laptop : ${laptops}" class="card">
         <h2 th:text="${laptop.name}">Laptop Name</h2>
         <p>
-          Price: $
-          <span th:text="${laptop.price}">0</span>
+            Price: $
+            <span th:text="${laptop.price}">0</span>
         </p>
         <button>Add to Cart</button>
-      </div>
     </div>
-  </body>
+</div>
+</body>
 </html>
