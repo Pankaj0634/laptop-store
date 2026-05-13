@@ -16,7 +16,6 @@ public class MainApplication {
         SpringApplication.run(MainApplication.class, args);
     }
 }
-
 @Controller
 class HomeController {
 
